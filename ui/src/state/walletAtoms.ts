@@ -7,4 +7,5 @@ export const proofUrlAtom = atom("");
 export const isSubmittingAtom = atom(false);
 export const isApprovedAtom = atom(false);
 export const isClaimingAtom = atom(false);
-export const cardStateAtom = atom<"connect" | "submit" | "approval">("connect");
+export const cardStateAtom = atom<"connect" | "submit" | "approval" | "none">("connect");
+export const isOverlayVisibleAtom = atom(false);

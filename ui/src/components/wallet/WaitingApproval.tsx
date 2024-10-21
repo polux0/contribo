@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useAtom } from "jotai";
-import { isApprovedAtom, isClaimingAtom, cardStateAtom, walletStateAtom } from "@/state/walletAtoms";
+import { isApprovedAtom, isClaimingAtom, cardStateAtom, walletStateAtom, isOverlayVisibleAtom } from "@/state/walletAtoms";
 import { Button } from "@/components/ui/button";
-import { Check, AlertCircle, Loader2 } from "lucide-react";
+import { Check, AlertCircle, Loader2, X } from "lucide-react";
 import { useToast } from "@/providers/ToastProviderWrapper";
 import { Card, CardHeader, CardContent, CardFooter, CardTitle, CardDescription } from "@/components/ui/card";
 
@@ -11,6 +11,7 @@ export const WaitingApproval = () => {
   const [isClaiming, setIsClaiming] = useAtom(isClaimingAtom);
   const [, setCardState] = useAtom(cardStateAtom); // Manage card state after claiming rewards
   const [, setWalletState] = useAtom(walletStateAtom); // Manage wallet state
+  const [isOverlayVisible, setOverlayVisible] = useAtom(isOverlayVisibleAtom);
   const { addToast } = useToast(); // Trigger toast notifications
 
   // Simulate approval after a delay
@@ -21,6 +22,11 @@ export const WaitingApproval = () => {
 
     return () => clearTimeout(timer); // Cleanup timer
   }, [setIsApproved]);
+
+  const handleClose = () => {
+    setCardState("none"); // Set card state to "none" to hide it
+    setOverlayVisible(false); // Hide overlay
+  };
 
   const handleClaimRewards = () => {
     setIsClaiming(true);
@@ -45,7 +51,8 @@ export const WaitingApproval = () => {
         // Reset the state after the toasts are displayed
         setTimeout(() => {
           setIsClaiming(false);
-          setCardState("connect"); // Reset to "Connect Wallet"
+          // setCardState("none"); // Reset to "None"
+          handleClose();
           setWalletState({ isConnected: false, isConnecting: false }); // Reset wallet state
         }, 2000); // Delay before resetting the wallet state to "connect"
       }, 100); // Small delay to ensure toasts appear in sequence
@@ -53,41 +60,68 @@ export const WaitingApproval = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen"> {/* Centering div */}
-      <Card className="w-[350px]">
-        <CardHeader>
-          <CardTitle>Waiting for Approval</CardTitle>
-          <CardDescription>
-            As soon as verifier approves your work, you'll be able to claim rewards & reputation
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-2">
-            <div className="flex items-center space-x-2">
-              {isApproved ? (
-                <Check className="h-4 w-4 text-green-500" />
-              ) : (
-                <AlertCircle className="h-4 w-4 text-yellow-500" />
-              )}
-              <span className={`text-sm font-medium ${isApproved ? 'text-green-500' : 'text-yellow-500'}`}>
-                Status: {isApproved ? "Approved" : "Waiting for approval"}
-              </span>
+    // Overlay wrapper to center the card
+    <div
+      className={`fixed inset-0 ${
+        isOverlayVisible ? 'flex' : 'hidden'
+      } items-center justify-center z-50 bg-black bg-opacity-40`}
+    >
+      <div className="relative">
+        <Card className="w-[350px]">
+          <CardHeader className="relative">
+            <CardTitle>Waiting for Approval</CardTitle>
+            <CardDescription>
+              As soon as the verifier approves your work, you'll be able to claim rewards & reputation.
+            </CardDescription>
+            {/* Close button */}
+            <Button
+              onClick={handleClose}
+              variant="ghost"
+              size="sm"
+              className="absolute top-0 right-0"
+            >
+              <X className="w-4 h-4" />
+            </Button>
+          </CardHeader>
+  
+          <CardContent>
+            <div className="space-y-2">
+              <div className="flex items-center space-x-2">
+                {isApproved ? (
+                  <Check className="h-4 w-4 text-green-500" />
+                ) : (
+                  <AlertCircle className="h-4 w-4 text-yellow-500" />
+                )}
+                <span
+                  className={`text-sm font-medium ${
+                    isApproved ? 'text-green-500' : 'text-yellow-500'
+                  }`}
+                >
+                  Status: {isApproved ? 'Approved' : 'Waiting for approval'}
+                </span>
+              </div>
             </div>
-          </div>
-        </CardContent>
-        <CardFooter>
-          <Button onClick={handleClaimRewards} disabled={!isApproved || isClaiming} className="w-full">
-            {isClaiming ? (
-              <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Claiming...
-              </>
-            ) : (
-              "Claim Rewards & Reputation"
-            )}
-          </Button>
-        </CardFooter>
-      </Card>
+          </CardContent>
+  
+          <CardFooter>
+            <Button
+              onClick={handleClaimRewards}
+              disabled={!isApproved || isClaiming}
+              className="w-full"
+            >
+              {isClaiming ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Claiming...
+                </>
+              ) : (
+                'Claim Rewards & Reputation'
+              )}
+            </Button>
+          </CardFooter>
+        </Card>
+      </div>
     </div>
   );
+  
 };

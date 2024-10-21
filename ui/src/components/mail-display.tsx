@@ -49,6 +49,8 @@ import { useAtom } from "jotai";
 import { cardStateAtom } from "@/state/walletAtoms";
 import { Button } from "@/components/ui/button";
 import WalletInteraction from "@/components/wallet/WalletInteraction"; 
+import { useOpenWalletModal } from "@/hooks/ui/useOpenWalletModal"; // Import the utility function
+
 // Imports related to Card & Wallet Connectivity
 
 interface MailDisplayProps {
@@ -58,14 +60,11 @@ interface MailDisplayProps {
 export function MailDisplay({ mail }: MailDisplayProps) {
   const today = new Date()
   const [, setCardState] = useAtom(cardStateAtom);
-
-  const handleSendClick = () => {
-    setCardState("connect");
-  };
+  const openWalletModal = useOpenWalletModal();
 
   return (
     <div className="flex h-full flex-col">
-      <div className="flex items-center p-2">
+      {/* <div className="flex items-center p-2">
         <div className="flex items-center gap-2">
           <Tooltip>
             <TooltipTrigger asChild>
@@ -199,7 +198,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
             <DropdownMenuItem>Mute thread</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
-      </div>
+      </div> */}
       <Separator />
       {mail ? (
         <div className="flex flex-1 flex-col">
@@ -218,7 +217,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                 <div className="font-semibold">{mail.name}</div>
                 <div className="line-clamp-1 text-xs">{mail.subject}</div>
                 <div className="line-clamp-1 text-xs">
-                  <span className="font-medium">Reply-To:</span> {mail.email}
+                  <span className="font-medium">Bounty:</span> {mail.email}
                 </div>
               </div>
             </div>
@@ -238,7 +237,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
               <div className="grid gap-4">
                 <Textarea
                   className="p-4"
-                  placeholder={`Reply ${mail.name}...`}
+                  placeholder={`Post a comment to ${mail.name}...`}
                 />
                 <div className="flex items-center">
                   <Label
@@ -249,13 +248,14 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                     thread
                   </Label>
                   <Button
-                    onClick={handleSendClick}
+                    type="button"
+                    onClick={openWalletModal}
                     size="sm"
                     className="ml-auto"
                   >
                     Send
                   </Button>
-                  <div className="mt-4">
+                  <div className="mt-4"> 
                     <WalletInteraction />
                   </div>
                 </div>
