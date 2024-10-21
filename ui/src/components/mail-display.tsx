@@ -50,8 +50,12 @@ import { cardStateAtom } from "@/state/walletAtoms";
 import { Button } from "@/components/ui/button";
 import WalletInteraction from "@/components/wallet/WalletInteraction"; 
 import { useOpenWalletModal } from "@/hooks/ui/useOpenWalletModal"; // Import the utility function
-
 // Imports related to Card & Wallet Connectivity
+
+// Share functionality
+import { CopyUrlCard } from "@/components/ui/CopyUrlCard";
+import { ShareButtonWithFallback } from "./ShareButtonWithFallback"
+// Share funcitonality
 
 interface MailDisplayProps {
   mail: Mail | null
@@ -231,6 +235,30 @@ export function MailDisplay({ mail }: MailDisplayProps) {
           <div className="flex-1 whitespace-pre-wrap p-4 text-sm">
             {mail.text}
           </div>
+          <div className="p-4">
+            <form>
+              <div className="grid gap-4">
+                {/* <Textarea
+                  className="p-4"
+                  placeholder={`Post a comment to ${mail.name}...`}
+                /> */}
+                <div className="flex items-center justify-between">
+                <ShareButtonWithFallback />
+                  <Button
+                    type="button"
+                    onClick={openWalletModal}
+                    size="sm"
+                    className="ml-auto"
+                  >
+                    Submit Contribution
+                  </Button>
+                  <div className="mt-4"> 
+                    <WalletInteraction />
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
           <Separator className="mt-auto" />
           <div className="p-4">
             <form>
@@ -240,16 +268,16 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                   placeholder={`Post a comment to ${mail.name}...`}
                 />
                 <div className="flex items-center">
-                  <Label
+                  {/* <Label
                     htmlFor="mute"
                     className="flex items-center gap-2 text-xs font-normal"
                   >
                     <Switch id="mute" aria-label="Mute thread" /> Mute this
                     thread
-                  </Label>
+                  </Label> */}
                   <Button
                     type="button"
-                    onClick={openWalletModal}
+                    // onClick={openWalletModal}
                     size="sm"
                     className="ml-auto"
                   >

@@ -1,81 +1,74 @@
 export const mails = [
-    {
-      id: "6c84fb90-12c4-11e1-840d-7b25c5ee775a",
-      name: "Lido DAO",
-      email: "williamsmith@example.com",
-      subject: "Smart contract for CRM",
-      text: "Hi, let's have a meeting tomorrow to discuss the project. I've been reviewing the project details and have some ideas I'd like to share. It's crucial that we align on our next steps to ensure the project's success.\n\nPlease come prepared with any questions or insights you may have. Looking forward to our meeting!\n\nBest regards, William",
-      date: "2024-10-14T09:00:00",
-      read: true,
-      // labels: ["meeting", "work", "important"],
-      labels: ["Solidity knowledge", "Programming", "Smart contracts"],
-    },
-    {
-      id: "110e8400-e29b-11d4-a716-446655440000",
-      name: "Ether hub",
-      email: "alicesmith@example.com",
-      subject: "Project Update",
-      text: "Thank you for the project update. It looks great! I've gone through the report, and the progress is impressive. The team has done a fantastic job, and I appreciate the hard work everyone has put in.\n\nI have a few minor suggestions that I'll include in the attached document.\n\nLet's discuss these during our next meeting. Keep up the excellent work!\n\nBest regards, Alice",
-      date: "2024-10-13T09:00:00",
-      read: true,
-      // labels: ["work", "important"],
-      labels: ["Javascript", "Typescript"],
-    },
-    {
-      id: "3e7c3f6d-bdf5-46ae-8d90-171300f27ae2",
-      name: "Bob Johnson",
-      email: "bobjohnson@example.com",
-      subject: "Repository translation",
-      text: "Any plans for the weekend? I was thinking of going hiking in the nearby mountains. It's been a while since we had some outdoor fun.\n\nIf you're interested, let me know, and we can plan the details. It'll be a great way to unwind and enjoy nature.\n\nLooking forward to your response!\n\nBest, Bob",
-      date: "2024-10-12T09:00:00",
-      read: true,
-      // labels: ["personal"],
-      labels: ["Technical translator ( English to Spanish )", "Technical documentation specialist"],
-    },
-    {
-      id: "61c35085-72d7-42b4-8d62-738f700d4b92",
-      name: "Optimism DAO",
-      email: "20,000 OP",
-      subject: "Full financial audit of optimism collective",
-      text: "I have a question about the budget for the upcoming project. It seems like there's a discrepancy in the allocation of resources.\n\nI've reviewed the budget report and identified a few areas where we might be able to optimize our spending without compromising the project's quality.\n\nI've attached a detailed analysis for your reference. Let's discuss this further in our next meeting.\n\nThanks, Emily",
-      date: "2024-10-11T09:00:00",
-      read: false,
-      // labels: ["work", "budget"],
-      labels: ["Data analyst", "Accountant", "Treasury manager"],
-    },
-    {
-      id: "8f7b5db9-d935-4e42-8e05-1f1d0a3dfb97",
-      name: "Decentralized labs",
-      email: "michaelwilson@example.com",
-      subject: "UI/UX Redesign for Web3 Dashboard",
-      text: "I have an important announcement to make during our team meeting. It pertains to a strategic shift in our approach to the upcoming product launch. We've received valuable feedback from our beta testers, and I believe it's time to make some adjustments to better meet our customers' needs.\n\nThis change is crucial to our success, and I look forward to discussing it with the team. Please be prepared to share your insights during the meeting.\n\nRegards, Michael",
-      date: "2024-10-10T09:00:00",
-      read: false,
-      // labels: ["meeting", "work", "important"],
-      labels: ["UI/UX Designer", "Frontend developer", "Graphic designer"],
-    },
-    {
-      id: "1f0f2c02-e299-40de-9b1d-86ef9e42126b",
-      name: "ChainGuard Security",
-      email: "sarahbrown@example.com",
-      subject: "Penetration testing of Layer2 solutions",
-      text: "Thank you for your feedback on the proposal. It looks great! I'm pleased to hear that you found it promising. The team worked diligently to address all the key points you raised, and I believe we now have a strong foundation for the project.\n\nI've attached the revised proposal for your review.\n\nPlease let me know if you have any further comments or suggestions. Looking forward to your response.\n\nBest regards, Sarah",
-      date: "2024-10-09T09:00:00",
-      read: true,
-      // labels: ["work"],
-      labels: ["DevOps engineer", "Ethical hacker", "Security researcher"],
-    },
-    {
-      id: "17c0a96d-4415-42b1-8b4f-764efab57f66",
-      name: "FinBlock solutions",
-      email: "davidlee@example.com",
-      subject: "Cross-Chain bridge integration for DeFi protocol",
-      text: "I have an exciting new project idea to discuss with you. It involves expanding our services to target a niche market that has shown considerable growth in recent months.\n\nI've prepared a detailed proposal outlining the potential benefits and the strategy for execution.\n\nThis project has the potential to significantly impact our business positively. Let's set up a meeting to dive into the details and determine if it aligns with our current goals.\n\nBest regards, David",
-      date: "2024-10-14T08:00:00",
-      read: false,
-      // labels: ["meeting", "work", "important"],
-      labels: ["Smart contract", "Developer", "Backend developer"],
-    },
+  {
+    id: "6c84fb90-12c4-11e1-840d-7b25c5ee775a",
+    name: "Lido DAO",
+    email: "10,000 LDO",
+    subject: "Smart contract for CRM",
+    text: "Develop and deploy a CRM (Customer Relationship Management) smart contract for Lido DAO.\n\nThe contract should handle user data securely and enable seamless integration with existing decentralized applications (dApps).\n\nKnowledge of Solidity and Ethereum is crucial.\n\nThe project requires extensive testing, deployment, and potential iterations based on feedback.\n\n",
+    date: "2024-10-14T09:00:00",
+    read: true,
+    labels: ["Solidity knowledge", "Programming", "Smart contracts"],
+  },
+  {
+    id: "110e8400-e29b-11d4-a716-446655440000",
+    name: "Ether hub",
+    email: "1,000 DAI",
+    subject: "Project Update",
+    text: "Improve the existing JavaScript-based project codebase by implementing TypeScript for better type safety and maintainability.\n\nCollaborate with the team to enhance code quality, address minor feedback, and ensure a robust, scalable solution.\n\n",
+    date: "2024-10-13T09:00:00",
+    read: true,
+    labels: ["Javascript", "Typescript"],
+  },
+  {
+    id: "3e7c3f6d-bdf5-46ae-8d90-171300f27ae2",
+    name: "Bob Johnson",
+    email: "300 USDC",
+    subject: "Repository translation",
+    text: "Translate technical documentation from English to Spanish, ensuring that all terminology and concepts are accurately conveyed.\n\nThe translator should have experience with technical documentation, particularly in blockchain-related repositories, to maintain context accuracy and clarity.\n\n",
+    date: "2024-10-12T09:00:00",
+    read: true,
+    labels: ["Technical translator (English to Spanish)", "Technical documentation specialist"],
+  },
+  {
+    id: "61c35085-72d7-42b4-8d62-738f700d4b92",
+    name: "Arbitrum DAO",
+    email: "20,000 ARB",
+    subject: "Full financial audit of arbitrum collective",
+    text: "Conduct a comprehensive audit of Arbitrum Collective's financials to gain a detailed understanding of its current financial state.\n\nThis audit will cover the DAO's assets, annual burn rate, expense allocation, and the value these expenses bring back to the DAO.\n\nThe research will also provide insights necessary for future treasury optimization decisions.\n\nThis mission ties into a broader initiative to enhance the Arbitrum Treasury.\n\nUnderstanding the current financial landscape is essential before making recommendations regarding Arbitrum's treasury and strategies to attract more developers to the Arbitrum chains.\n\n\n Key requirements:\n - Audit the DAO’s trailing 12-month revenues and expenses.\n - Provide forecasts for the next 12 months.\n - Analyze the DAO’s assets, liabilities, and cash flows.\n - Assess the impact of ARB sell pressure on the token price due to expenses.\n - Review each expense and its value return, especially incentives and paid services.\n - Work closely with members of Arbitrum Foundation.\n - A detailed financial report covering all aspects outlined above.\n - Frameworks for evaluating and optimizing future DAO expenses.\n - Recommendations on how to adjust expenses to strengthen the DAO’s treasury.\n\n\n Eligibility criteria:\n - Financial auditing of DAOs or decentralized ecosystems.\n - Strong analytical skills with a background in blockchain finance.\n - Previous experience with high-profile DAOs (e.g., Arbitrum) is a plus.\n\n\n Deliverables:\n The success of this mission will be evaluated based on TVL growth, as the research aims to optimize the financial health of Arbitrum and increase its attractiveness to developers.\n\n",
+    date: "2024-10-11T09:00:00",
+    read: false,
+    labels: ["Data analyst", "Accountant", "Treasury manager"],
+  },
+  {
+    id: "8f7b5db9-d935-4e42-8e05-1f1d0a3dfb97",
+    name: "Decentralized labs",
+    email: "2,000 USDC",
+    subject: "UI/UX Redesign for Web3 Dashboard",
+    text: "Redesign the user interface and user experience of a Web3 dashboard, emphasizing usability and feedback from beta testers.\n\nThe role involves creating wireframes, designing mockups, and collaborating with frontend developers to implement the new design.\n\n",
+    date: "2024-10-10T09:00:00",
+    read: false,
+    labels: ["UI/UX Designer", "Frontend developer", "Graphic designer"],
+  },
+  {
+    id: "1f0f2c02-e299-40de-9b1d-86ef9e42126b",
+    name: "ChainGuard Security",
+    email: "3,000 USDC",
+    subject: "Penetration testing of Layer2 solutions",
+    text: "Perform penetration testing and security analysis of Layer2 solutions to identify vulnerabilities and enhance overall security.\n\nThis task requires skills in ethical hacking, DevOps, and advanced knowledge of Layer2 architectures to protect against potential threats.\n\n",
+    date: "2024-10-09T09:00:00",
+    read: true,
+    labels: ["DevOps engineer", "Ethical hacker", "Security researcher"],
+  },
+  {
+    id: "17c0a96d-4415-42b1-8b4f-764efab57f66",
+    name: "FinBlock solutions",
+    email: "6,000 USDC",
+    subject: "Cross-Chain bridge integration for DeFi protocol",
+    text: "Integrate a cross-chain bridge solution for a DeFi protocol, enabling seamless interoperability across blockchains.\n\nThe developer will need experience in smart contract development, cross-chain technologies, and backend development to ensure secure and efficient transactions.\n\n",
+    date: "2024-10-14T08:00:00",
+    read: false,
+    labels: ["Smart contract", "Developer", "Backend developer"],
+  },
     // {
     //   id: "2f0130cb-39fc-44c4-bb3c-0a4337edaaab",
     //   name: "Olivia Wilson",
@@ -182,8 +175,8 @@ export const mails = [
   
   export const accounts = [
     {
-      label: "Alicia Koch",
-      email: "alicia@example.com",
+      label: "Aleksa Stojanović",
+      email: "alexusnavas@gmail.com",
       icon: (
         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <title>Vercel</title>
@@ -192,8 +185,8 @@ export const mails = [
       ),
     },
     {
-      label: "Alicia Koch",
-      email: "alicia@gmail.com",
+      label: "Juan Rah",
+      email: "juanramirogarza@gmail.com",
       icon: (
         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <title>Gmail</title>
@@ -204,19 +197,19 @@ export const mails = [
         </svg>
       ),
     },
-    {
-      label: "Alicia Koch",
-      email: "alicia@me.com",
-      icon: (
-        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <title>iCloud</title>
-          <path
-            d="M13.762 4.29a6.51 6.51 0 0 0-5.669 3.332 3.571 3.571 0 0 0-1.558-.36 3.571 3.571 0 0 0-3.516 3A4.918 4.918 0 0 0 0 14.796a4.918 4.918 0 0 0 4.92 4.914 4.93 4.93 0 0 0 .617-.045h14.42c2.305-.272 4.041-2.258 4.043-4.589v-.009a4.594 4.594 0 0 0-3.727-4.508 6.51 6.51 0 0 0-6.511-6.27z"
-            fill="currentColor"
-          />
-        </svg>
-      ),
-    },
+    // {
+    //   label: "Alicia Koch",
+    //   email: "alicia@me.com",
+    //   icon: (
+    //     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    //       <title>iCloud</title>
+    //       <path
+    //         d="M13.762 4.29a6.51 6.51 0 0 0-5.669 3.332 3.571 3.571 0 0 0-1.558-.36 3.571 3.571 0 0 0-3.516 3A4.918 4.918 0 0 0 0 14.796a4.918 4.918 0 0 0 4.92 4.914 4.93 4.93 0 0 0 .617-.045h14.42c2.305-.272 4.041-2.258 4.043-4.589v-.009a4.594 4.594 0 0 0-3.727-4.508 6.51 6.51 0 0 0-6.511-6.27z"
+    //         fill="currentColor"
+    //       />
+    //     </svg>
+    //   ),
+    // },
   ]
   
   export type Account = (typeof accounts)[number]

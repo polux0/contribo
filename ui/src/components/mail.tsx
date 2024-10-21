@@ -7,6 +7,9 @@ import {
   ArchiveX,
   File,
   Inbox,
+  Activity,
+  Award,
+  Star,
   MessagesSquare,
   Search,
   Send,
@@ -95,7 +98,7 @@ export function Mail({
         >
           <div
             className={cn(
-              "flex h-[52px] items-center justify-center",
+              "flex h-[52px] items-center justify-center border-t border-gray-200",
               isCollapsed ? "h-[52px]" : "px-2"
             )}
           >
@@ -106,45 +109,45 @@ export function Mail({
             isCollapsed={isCollapsed}
             links={[
               {
-                title: "Inbox",
-                label: "128",
-                icon: Inbox,
+                title: "Activity",
+                label: "1",
+                icon: Activity,
                 variant: "default",
               },
               {
-                title: "Drafts",
-                label: "9",
-                icon: File,
+                title: "Reputation",
+                label: "3",
+                icon: Award,
                 variant: "ghost",
               },
-              {
-                title: "Sent",
-                label: "",
-                icon: Send,
-                variant: "ghost",
-              },
-              {
-                title: "Junk",
-                label: "23",
-                icon: ArchiveX,
-                variant: "ghost",
-              },
-              {
-                title: "Trash",
-                label: "",
-                icon: Trash2,
-                variant: "ghost",
-              },
-              {
-                title: "Archive",
-                label: "",
-                icon: Archive,
-                variant: "ghost",
-              },
+              // {
+              //   title: "Sent",
+              //   label: "",
+              //   icon: Send,
+              //   variant: "ghost",
+              // },
+              // {
+              //   title: "Junk",
+              //   label: "23",
+              //   icon: ArchiveX,
+              //   variant: "ghost",
+              // },
+              // {
+              //   title: "Trash",
+              //   label: "",
+              //   icon: Trash2,
+              //   variant: "ghost",
+              // },
+              // {
+              //   title: "Archive",
+              //   label: "",
+              //   icon: Archive,
+              //   variant: "ghost",
+              // },
             ]}
           />
           <Separator />
-          <Nav
+          {/* <Nav
             isCollapsed={isCollapsed}
             links={[
               {
@@ -178,12 +181,12 @@ export function Mail({
                 variant: "ghost",
               },
             ]}
-          />
+          /> */}
         </ResizablePanel>
         <ResizableHandle withHandle />
         <ResizablePanel defaultSize={defaultLayout[1]} minSize={30}>
           <Tabs defaultValue="all">
-            <div className="flex items-center px-4 py-2">
+            <div className="flex items-center px-4 py-2 border-t border-gray-200">
               <h1 className="text-xl font-bold">Community Dashboard</h1>
               <TabsList className="ml-auto">
                 <TabsTrigger

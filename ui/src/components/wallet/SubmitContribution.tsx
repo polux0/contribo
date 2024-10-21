@@ -57,7 +57,7 @@ export const SubmitContribution = () => {
                   <AvatarFallback>CN</AvatarFallback>
                 </Avatar>
                 <div>
-                  <div className="font-medium">Contributor Name</div>
+                  <div className="font-medium">Aleksa Stojanović</div>
                   <div className="text-sm text-gray-500">{walletState.address || '0x9876...4321'}</div>
                 </div>
               </div>
@@ -72,7 +72,7 @@ export const SubmitContribution = () => {
                   <AvatarFallback>VC</AvatarFallback>
                 </Avatar>
                 <div>
-                  <div className="font-medium">Verifier Name</div>
+                  <div className="font-medium">Juan Rah</div>
                   <div className="text-sm text-gray-500">0xabcd...ef01</div>
                 </div>
               </div>
@@ -87,8 +87,9 @@ export const SubmitContribution = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <span className="text-sm font-medium">Type:</span>
-                <Badge variant="outline" className="bg-purple-100 text-purple-800 hover:bg-purple-200">#back-end</Badge>
-                <Badge variant="outline" className="bg-purple-100 text-purple-800 hover:bg-purple-200">#devops</Badge>
+                <Badge variant="outline" className="bg-purple-100 text-purple-800 hover:bg-purple-200">#Data analyst</Badge>
+                <Badge variant="outline" className="bg-purple-100 text-purple-800 hover:bg-purple-200">#Accountat</Badge>
+                <Badge variant="outline" className="bg-purple-100 text-purple-800 hover:bg-purple-200">#Treasury manager</Badge>
               </div>
             </div>
 
