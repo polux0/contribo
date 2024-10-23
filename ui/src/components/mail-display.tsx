@@ -1,53 +1,21 @@
-import {addDays} from "date-fns/addDays"
-import {addHours} from "date-fns/addHours"
-import {format} from "date-fns/format"
-import {nextSaturday} from "date-fns/nextSaturday"
-import {
-  Archive,
-  ArchiveX,
-  Clock,
-  Forward,
-  MoreVertical,
-  Reply,
-  ReplyAll,
-  Trash2,
-} from "lucide-react"
 
-import {
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from "@/registry/default/ui/dropdown-menu"
+import {format} from "date-fns/format"
+
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
 } from "@/registry/new-york/ui/avatar"
-// import { Button } from "@/registry/new-york/ui/button"
-import { Calendar } from "@/registry/new-york/ui/calendar"
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-} from "@/registry/new-york/ui/dropdown-menu"
-import { Label } from "@/registry/new-york/ui/label"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
+import { Button } from "@/registry/new-york/ui/button"
+
 import { Separator } from "@/registry/new-york/ui/separator"
-import { Switch } from "@/registry/new-york/ui/switch"
 import { Textarea } from "@/registry/new-york/ui/textarea"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/registry/new-york/ui/tooltip"
+
 import { Mail } from "@/app/data";
 
 // Imports related to Card & Wallet Connectivity
 import { useAtom } from "jotai";
 import { cardStateAtom } from "@/state/walletAtoms";
-import { Button } from "@/components/ui/button";
 import WalletInteraction from "@/components/wallet/WalletInteraction"; 
 import { useOpenWalletModal } from "@/hooks/ui/useOpenWalletModal"; // Import the utility function
 // Imports related to Card & Wallet Connectivity
@@ -57,6 +25,11 @@ import { CopyUrlCard } from "@/components/ui/CopyUrlCard";
 import { ShareButtonWithFallback } from "./ShareButtonWithFallback"
 // Share funcitonality
 
+// Imports related to Web3 functionality
+import { useWeb3Modal } from "@web3modal/wagmi/react";
+import { useAccount, useDisconnect } from "wagmi";
+import CustomButton from "./wallet/ConnectWalletButton"
+
 interface MailDisplayProps {
   mail: Mail | null
 }
@@ -65,6 +38,12 @@ export function MailDisplay({ mail }: MailDisplayProps) {
   const today = new Date()
   const [, setCardState] = useAtom(cardStateAtom);
   const openWalletModal = useOpenWalletModal();
+
+  // Imports related to Web3 functionality
+  // const { open } = useWeb3Modal();
+  // const { isConnected } = useAccount();
+  // const { disconnect } = useDisconnect();
+  // Imports related to Web3 functionality
 
   return (
     <div className="flex h-full flex-col">
@@ -252,6 +231,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                   >
                     Submit Contribution
                   </Button>
+                  {/* <CustomButton>Submit Contribution</CustomButton> */}
                   <div className="mt-4"> 
                     <WalletInteraction />
                   </div>
