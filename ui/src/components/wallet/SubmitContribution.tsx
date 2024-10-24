@@ -87,9 +87,9 @@ export const SubmitContribution = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <span className="text-sm font-medium">Type:</span>
-                <Badge variant="outline" className="bg-purple-100 text-purple-800 hover:bg-purple-200">#Data analyst</Badge>
-                <Badge variant="outline" className="bg-purple-100 text-purple-800 hover:bg-purple-200">#Accountat</Badge>
-                <Badge variant="outline" className="bg-purple-100 text-purple-800 hover:bg-purple-200">#Treasury manager</Badge>
+                <Badge variant="outline" className="bg-purple-100 text-purple-800 hover:bg-purple-200">#Smart contracts</Badge>
+                <Badge variant="outline" className="bg-purple-100 text-purple-800 hover:bg-purple-200">#DAOs</Badge>
+                <Badge variant="outline" className="bg-purple-100 text-purple-800 hover:bg-purple-200">#On-chain voting</Badge>
               </div>
             </div>
 
