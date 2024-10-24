@@ -20,7 +20,7 @@ CONTRIBO is a decentralized marketplace for bounties and grants within the Web3 
     ```
 2. Install dependencies:
     ```bash
-    cd ui &npm install
+    cd ui & npm install
     ```
 3. Set up environment variables:
     - Create a `.env` file in the root directory based on `.env.example` and add the necessary variables.
@@ -37,14 +37,14 @@ CONTRIBO is a decentralized marketplace for bounties and grants within the Web3 
 4. **Submit Work**: Once you complete a task, upload your deliverable (e.g., GitHub PR, design files, etc.) and click “Submit for Review.”
 5. **Receive Payment**: After a successful review, the smart contract automatically deploys the reward to your linked wallet.
 
-## Demo
+## Demo ( Proof of concept )
 
 ![Demo](Contribo-proof-of-concept.gif)
 
 ## Video
 
-[Watch the Full Demo on Loom](https://www.loom.com/share/b7282966c6c14ad9957a9f6181789d66?sid=39338261-1be2-4049-8aca-c0d0ffabf59f)
+[Watch the video](https://www.loom.com/share/b7282966c6c14ad9957a9f6181789d66?sid=39338261-1be2-4049-8aca-c0d0ffabf59f)
 
 ## Presentation
 
-[Download PDF Presentation](Contribo-strategic-proposal.pdf)
+[Download PDF Presentation / Strategic proposal](Contribo-strategic-proposal.pdf)
