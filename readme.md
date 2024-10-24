@@ -1,7 +1,3 @@
-## Demo
-
-[Watch the UI Demo](https://link_to_your_video)
-
 # CONTRIBO – Proof of Contribution
 
 ## Description
@@ -40,3 +36,15 @@ CONTRIBO is a decentralized marketplace for bounties and grants within the Web3 
 3. **Apply for a Task**: Click on a listed task, review the details, and click “Apply” to express interest and provide a brief proposal or portfolio link.
 4. **Submit Work**: Once you complete a task, upload your deliverable (e.g., GitHub PR, design files, etc.) and click “Submit for Review.”
 5. **Receive Payment**: After a successful review, the smart contract automatically deploys the reward to your linked wallet.
+
+## Demo
+
+![Demo](Contribo-proof-of-concept.gif)
+
+## Video
+
+[Watch the Full Demo on Loom](https://www.loom.com/share/b7282966c6c14ad9957a9f6181789d66?sid=39338261-1be2-4049-8aca-c0d0ffabf59f)
+
+## Presentation
+
+[Download PDF Presentation](Contribo-strategic-proposal.pdf)
